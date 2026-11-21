@@ -210,6 +210,8 @@ With `HA_DISCOVERY` enabled, a **Water meter** device appears automatically with
 - **Binary sensors:** Leakage, Pipe burst, Reverse flow, Meter low battery,
   Meter reader link
 
+![Water meter device in Home Assistant](assets/dashboard.png)
+
 ## How it works
 
 **Reader cycle** (all in `setup()`; `loop()` is never reached):

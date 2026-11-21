@@ -47,6 +47,19 @@ The project is two Arduino sketches:
 Both sides use an **ESP32-WROOM** dev board and a **DX-LR30-433M22S** (SX1262)
 LoRa module. The reader additionally has a **PN5180** NFC module.
 
+### Components list
+
+| Component | Qty | Used on | Notes |
+|---|---|---|---|
+| ESP32-WROOM dev board (e.g. ESP32-DevKitC) | 2 | Reader + publisher | Any ESP32-WROOM board with the GPIOs below broken out. |
+| DX-LR30-433M22S LoRa module (SX1262, 433 MHz) | 2 | Reader + publisher | 3.3 V supply only. |
+| 433 MHz antenna | 2 | Reader + publisher | One per LR30; never transmit without an antenna attached. |
+| PN5180 NFC module | 1 | Reader | Needs both 5 V and 3.3 V. |
+| Power bank or battery | 1 | Reader | For a power bank, enable the keep-alive (see *Configuration*). |
+| USB power supply (5 V) | 1 | Publisher | The gateway listens continuously, so it needs mains power. |
+| Jumper wires / perfboard | — | Both | For the SPI and control wiring. |
+| Weatherproof enclosure | 1 | Reader | Recommended for meter pits and outdoor installs. |
+
 ### LoRa module (both sides — identical wiring)
 
 | DX-LR30 | ESP32 GPIO |

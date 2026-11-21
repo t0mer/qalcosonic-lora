@@ -5,10 +5,11 @@
 #define NODE_ID 1   // must match READER_NODE_ID on the publisher
 
 // ---- Polling ----
-// 10 s is for bench testing only. Every NFC read wakes the meter and costs its
-// sealed battery a little: upstream measured ~1% per 75 days at 60 s, so 10 s
-// is roughly 1% every ~12 days. Use 300000 (5 min) or more once it works.
-#define POLL_INTERVAL_MS 3600000UL
+// Default: one read per hour. Every NFC read wakes the meter and costs its
+// sealed battery a little: upstream measured ~1% per 75 days at 60 s, so 1 h
+// is roughly 1% every ~12 years. Short intervals (e.g. 10000 = 10 s, ~1% every
+// ~12 days) are for bench testing only; keep it at 300000 (5 min) or more in use.
+#define POLL_INTERVAL_MS 3600000UL   // 1 h
 
 // ---- Deep sleep ----
 // The reader deep-sleeps between polls. If the LR30 fails to start it sleeps

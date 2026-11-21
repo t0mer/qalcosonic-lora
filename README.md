@@ -42,6 +42,22 @@ The project is two Arduino sketches:
   sensors, and a reader-link connectivity sensor. Entities go unavailable when
   either the gateway or the reader stops reporting.
 
+## Supported meters
+
+| Meter | Status | Notes |
+|---|---|---|
+| Axioma Qalcosonic W1 | ✅ Supported | Read through its built-in NFC interface. |
+
+Other meters are untested. A meter could work if it:
+
+- has an **ST25DV-type NFC tag** with a mailbox (Fast Transfer Mode) that can be
+  powered by energy harvesting from the reader's field, and
+- answers **wired M-Bus** requests (`SND_NKE` / `REQ_UD2`) through that mailbox.
+
+The reader doesn't check the meter model; it decodes whatever standard M-Bus
+records come back (volume, flow, temperatures, battery, alarms). If you get
+another meter working, please open an issue or PR so it can be added here.
+
 ## Hardware
 
 Both sides use an **ESP32-WROOM** dev board and a **DX-LR30-433M22S** (SX1262)

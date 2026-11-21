@@ -48,6 +48,12 @@ The project is two Arduino sketches:
 |---|---|---|
 | Axioma Qalcosonic W1 | ✅ Supported | Read through its built-in NFC interface. |
 
+<p align="center">
+  <img src="assets/meter.jpg" alt="Axioma Qalcosonic W1 water meter" width="360">
+  <br>
+  <sub>Axioma Qalcosonic W1. Image © <a href="https://www.axiomametering.com/en/products/water-metering-devices/mechanical/qalcosonic-w1">Axioma Metering</a>.</sub>
+</p>
+
 Other meters are untested. A meter could work if it:
 
 - has an **ST25DV-type NFC tag** with a mailbox (Fast Transfer Mode) that can be
